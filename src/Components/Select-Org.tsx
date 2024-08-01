@@ -46,7 +46,7 @@ function OrgAuto() {
         return () => {
             ignore = true;
         };
-    }, []);
+    });
 
     const onChange = (newData : string | null) => {
         if (newData === null) {

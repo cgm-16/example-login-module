@@ -7,7 +7,7 @@ export default function SignUpFin() {
             <div className="lg:w-full w-[1440px] h-[456px] px-[404px] flex-col justify-start items-center gap-[17px] inline-flex">
                 <div className="pl-[46px] pr-[46px] pt-[80px] pb-[24px] justify-end items-center inline-flex">
                     <div className="origin-top-left w-[180px] h-[200px] relative">
-                        <img src={home} />
+                        <img src={home} alt=""/>
                     </div>
                 </div>
                 <div className="justify-start items-center gap-1 inline-flex">
