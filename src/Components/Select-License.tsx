@@ -42,7 +42,6 @@ export default function SelectLicense() {
                     <div className="justify-center items-start gap-8 inline-flex">
                         <div className="w-[632px] flex-col justify-center items-start gap-1 inline-flex">
                             <div className="text-zinc-800 text-2xl font-semibold font-['Inter'] leading-loose">면허 번호를 입력하세요.</div>
-                            <div className="self-stretch text-gray-500 text-sm font-normal font-['Inter'] leading-snug">쓰리빌리언은 안전한 유전 검사 의뢰를 위해 가입 정보를 확인하고 있습니다.</div>
                         </div>
                     </div>
                     <div className="self-stretch justify-start items-center gap-6 inline-flex">
