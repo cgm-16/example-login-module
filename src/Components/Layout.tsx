@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes } from '../Router/Router';
-import { NextBtn, PrevBtn } from './Buttons/NavButtons';
 
 export type NavButtonBarProps = {
     nextPage: Routes;
@@ -20,6 +19,7 @@ const Title = () => {
     );
 }
 
+/*
 const NavButtonBar = ({nextPage, nextValidation, prevPage = undefined} : NavButtonBarProps) => {
     return (
         <div className="absolute bottom-0 flex w-screen bg-slate-900 justify-center gap-6 items-center transition">
@@ -28,6 +28,7 @@ const NavButtonBar = ({nextPage, nextValidation, prevPage = undefined} : NavButt
         </div>
     );
 };
+*/
 
 export const NavButtonLayout = ({ children } : LayoutProps) => {
     return (
