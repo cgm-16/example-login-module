@@ -1,0 +1,1 @@
+export type WorkerRole = "doctor" | "nurse" | "researcher" | "admin";

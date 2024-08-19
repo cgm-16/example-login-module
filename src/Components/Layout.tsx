@@ -1,22 +1,49 @@
 import React from 'react';
+import { Routes } from '../Router/Router';
+import { NextBtn, PrevBtn } from './Buttons/NavButtons';
+
+export type NavButtonBarProps = {
+    nextPage: Routes;
+    nextValidation: boolean;
+    prevPage: Routes | undefined;
+};
+
+export type LayoutProps = {
+    children : React.ReactElement;
+}
 
 const Title = () => {
     return (
-        <div className="lg:w-full w-[1440px] h-20 px-60 py-10 bg-slate-900 flex-col justify-center items-start gap-6 inline-flex">
-            <div className="lg:w-full w-[960px] justify-center items-start gap-8 inline-flex">
-                <div className="justify-start items-center gap-4 flex">
-                    <div className="text-center text-white text-2xl font-semibold font-['Inter'] leading-loose">회원 가입</div>
-                </div>
-            </div>
+        <div className="flex w-screen h-20 bg-slate-900 justify-center items-center">
+            <div className=" text-white text-2xl font-semibold font-['Inter']">회원 가입</div>
         </div>
     );
 }
 
-export default function Layout({ children } : {children: React.ReactElement}) {
+const NavButtonBar = ({nextPage, nextValidation, prevPage = undefined} : NavButtonBarProps) => {
     return (
-        <div className="lg:w-full w-[1440px] h-[1024px] relative bg-white">
+        <div className="absolute bottom-0 flex w-screen bg-slate-900 justify-center gap-6 items-center transition">
+            {prevPage && <PrevBtn linkTo={prevPage}/>}
+            <NextBtn linkTo={nextPage} validation={nextValidation}/>
+        </div>
+    );
+};
+
+export const NavButtonLayout = ({ children } : LayoutProps) => {
+    return (
+        <div className="absolute w-full bottom-12 flex bg-white justify-center items-center transition-all gap-16">
+            {children}
+        </div>
+    );
+}
+
+export function Layout({ children } : LayoutProps) : React.ReactElement {
+    return (
+        <div className="lg:w-full w-screen h-screen relative bg-white">
             <Title />
-            { children }
+            <div className="w-full py-20 flex flex-col justify-center items-center gap-12">
+                { children }
+            </div>
         </div>
     );
 }
