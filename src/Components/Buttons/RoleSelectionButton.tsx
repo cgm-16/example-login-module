@@ -35,6 +35,7 @@ export const RoleButton = ({ roleType }: RoleButtonProps) => {
         name="roles"
         id={roleType}
         value={roleType}
+        checked={role === roleType}
         onClick={() => changeRoles(roleType)}
       />
       <label
