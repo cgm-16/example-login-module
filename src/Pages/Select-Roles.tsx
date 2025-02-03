@@ -1,7 +1,7 @@
 import "../index.css";
-import { NextBtn } from "../Components/Buttons/NavButtons";
 import { Layout, NavButtonLayout } from "../Components/Layout";
 import { RoleButton } from "../Components/Buttons/RoleSelectionButton";
+import NextButton from "../Components/Buttons/NextButton";
 
 const RoleSection = () => {
   return (
@@ -30,7 +30,7 @@ export default function SelectRoles() {
         <RoleSection />
         <NavButtonLayout>
           <div className="justify-center items-start flex">
-            <NextBtn linkTo="/organization" validation={true} />
+            <NextButton linkTo="/organization" validation={true} />
           </div>
         </NavButtonLayout>
       </>

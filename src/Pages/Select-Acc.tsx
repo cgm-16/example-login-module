@@ -5,7 +5,8 @@ import { TextField } from "@mui/material";
 import { accState, roleState } from "../States/UserStates";
 import { accVal } from "../States/ValidateState";
 import { Layout, NavButtonLayout } from "../Components/Layout";
-import { NextBtn, PrevBtn } from "../Components/Buttons/NavButtons";
+import PrevButton from "../Components/Buttons/PrevButton";
+import NextButton from "../Components/Buttons/NextButton";
 
 function AccInput() {
   const [isEmail, setIsEmail] = useState(false);
@@ -113,13 +114,13 @@ export default function SelectAcc() {
           <>
             <div className="h-12 justify-center items-start flex">
               {role === "doctor" || role === "nurse" ? (
-                <PrevBtn linkTo="/license" />
+                <PrevButton linkTo="/license" />
               ) : (
-                <PrevBtn linkTo="/organization" />
+                <PrevButton linkTo="/organization" />
               )}
             </div>
             <div className="h-12 justify-center items-start flex">
-              <NextBtn linkTo="/password" validation={val ?? false} />
+              <NextButton linkTo="/password" validation={val ?? false} />
             </div>
           </>
         </NavButtonLayout>

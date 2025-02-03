@@ -4,9 +4,10 @@ import "../index.css";
 import { pwState } from "../States/UserStates";
 import { pwVal } from "../States/ValidateState";
 import { Layout, NavButtonLayout } from "../Components/Layout";
-import { DefaultButton, PrevBtn } from "../Components/Buttons/NavButtons";
+import PrevButton from "../Components/Buttons/PrevButton";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import PrimaryButton from "../Components/Buttons/PrimaryButton";
 
 function PwInput() {
   const [pw, setPw] = useRecoilState(pwState);
@@ -148,10 +149,10 @@ export default function SelectPw() {
         <NavButtonLayout>
           <>
             <div className="h-12 justify-center items-start flex">
-              <PrevBtn linkTo="/account" />
+              <PrevButton linkTo="/account" />
             </div>
             <div className="h-12 justify-center items-start flex">
-              <DefaultButton
+              <PrimaryButton
                 isNext={true}
                 linkTo="/finished"
                 text="회원 가입하기"

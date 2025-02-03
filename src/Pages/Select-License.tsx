@@ -5,7 +5,8 @@ import { TextField } from "@mui/material";
 import { licState } from "../States/UserStates";
 import { licVal } from "../States/ValidateState";
 import { Layout, NavButtonLayout } from "../Components/Layout";
-import { NextBtn, PrevBtn } from "../Components/Buttons/NavButtons";
+import PrevButton from "../Components/Buttons/PrevButton";
+import NextButton from "../Components/Buttons/NextButton";
 
 function LicInput() {
   const [lic, setLic] = useRecoilState(licState);
@@ -61,10 +62,10 @@ export default function SelectLicense() {
         <NavButtonLayout>
           <>
             <div className="h-12 justify-center items-start flex">
-              <PrevBtn linkTo="/organization" />
+              <PrevButton linkTo="/organization" />
             </div>
             <div className="h-12 justify-center items-start flex">
-              <NextBtn linkTo="/account" validation={val ?? false} />
+              <NextButton linkTo="/account" validation={val ?? false} />
             </div>
           </>
         </NavButtonLayout>

@@ -5,7 +5,8 @@ import { Autocomplete, TextField } from "@mui/material";
 import { roleState, orgState, orgList } from "../States/UserStates";
 import { orgVal } from "../States/ValidateState";
 import { Layout, NavButtonLayout } from "../Components/Layout";
-import { NextBtn, PrevBtn } from "../Components/Buttons/NavButtons";
+import PrevButton from "../Components/Buttons/PrevButton";
+import NextButton from "../Components/Buttons/NextButton";
 
 function OrgInput() {
   const [curOrg, setCurOrg] = useRecoilState(orgState);
@@ -121,13 +122,13 @@ export default function SelectOrg() {
         <NavButtonLayout>
           <>
             <div className="h-12 justify-center items-start flex">
-              <PrevBtn linkTo="/" />
+              <PrevButton linkTo="/" />
             </div>
             <div className="h-12 justify-center items-start flex">
               {role === "doctor" || role === "nurse" ? (
-                <NextBtn linkTo="/license" validation={val ?? false} />
+                <NextButton linkTo="/license" validation={val ?? false} />
               ) : (
-                <NextBtn linkTo="/account" validation={val ?? false} />
+                <NextButton linkTo="/account" validation={val ?? false} />
               )}
             </div>
           </>
