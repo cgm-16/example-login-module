@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
-import "../index.css";
-import { pwState } from "../States/UserStates";
-import { pwVal } from "../States/ValidateState";
-import { Layout, NavButtonLayout } from "../Components/Layout";
-import PrevButton from "../Components/Buttons/PrevButton";
+import { useRecoilState } from "recoil";
+import { pwState } from "../Stores/userStates";
+import { pwVal } from "../Stores/validateStates";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import PrimaryButton from "../Components/Buttons/PrimaryButton";
 
-function PwInput() {
+export function PwInput() {
   const [pw, setPw] = useRecoilState(pwState);
   const [val, setVal] = useRecoilState(pwVal);
   const [isPw, setIsPW] = useState(null as null | boolean);
@@ -72,9 +68,7 @@ function PwInput() {
         <TextField
           type={showPassword ? "text" : "password"}
           error={!(isPw ?? true)}
-          helperText={
-            !(isPw ?? true) && "8~16자 영문, 숫자, 특수문자를 입력하세요."
-          }
+          helperText={!(isPw ?? true) && "8~16자 영문, 숫자, 특수문자를 입력하세요."}
           className="h-12 w-[460px] bg-white rounded-lg placeholder:text-neutral-300 text-base font-normal font-['Inter'] leading-relaxed"
           InputProps={{
             endAdornment: (
@@ -92,8 +86,7 @@ function PwInput() {
           }}
           placeholder="비밀번호를 입력하세요."
           value={pw}
-          onChange={onPwChange}
-        />
+          onChange={onPwChange} />
       </div>
 
       <div className="self-stretch justify-start items-center gap-6 inline-flex">
@@ -124,44 +117,8 @@ function PwInput() {
           }}
           placeholder="비밀번호를 한번 더 입력하세요."
           value={conf}
-          onChange={onConfChange}
-        />
+          onChange={onConfChange} />
       </div>
     </>
-  );
-}
-
-export default function SelectPw() {
-  const val = useRecoilValue(pwVal);
-
-  return (
-    <Layout>
-      <>
-        <div className="justify-center items-center mb-24">
-          <div className="text-zinc-800 text-2xl font-semibold font-['Inter'] leading-loose">
-            비밀번호를 입력하세요.
-          </div>
-        </div>
-        <div className="grow shrink basis-0 flex-col justify-start items-start inline-flex gap-8">
-          <PwInput />
-        </div>
-
-        <NavButtonLayout>
-          <>
-            <div className="h-12 justify-center items-start flex">
-              <PrevButton linkTo="/account" />
-            </div>
-            <div className="h-12 justify-center items-start flex">
-              <PrimaryButton
-                isNext={true}
-                linkTo="/finished"
-                text="회원 가입하기"
-                validation={val ?? false}
-              />
-            </div>
-          </>
-        </NavButtonLayout>
-      </>
-    </Layout>
   );
 }

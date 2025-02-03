@@ -1,4 +1,4 @@
-import { Routes } from "../../Router/Router";
+import { Routes } from "../Router/routes";
 
 export type ButtonProps = {
   linkTo: Routes;

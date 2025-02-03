@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes } from '../Router/Router';
+import { Routes } from '../Router/routes';
 
 export type NavButtonBarProps = {
     nextPage: Routes;
