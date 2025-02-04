@@ -1,7 +1,7 @@
 import "../index.css";
-import { Layout, NavButtonLayout } from "../Components/Layout";
-import NextButton from "../Components/Buttons/NextButton";
-import { RoleSection } from "../Components/RoleSection";
+import { Layout, NavButtonLayout } from "../components/Layout";
+import NextButton from "../components/buttons/NextButton";
+import { RoleSection } from "../components/RoleSection";
 
 export default function SelectRoles() {
   return (

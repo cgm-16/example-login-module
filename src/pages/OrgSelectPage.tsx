@@ -1,13 +1,13 @@
 import React from "react";
 import { useRecoilValue } from "recoil";
 import "../index.css";
-import { roleState } from "../Stores/userStates";
-import { orgVal } from "../Stores/validateStates";
-import { Layout, NavButtonLayout } from "../Components/Layout";
-import PrevButton from "../Components/Buttons/PrevButton";
-import NextButton from "../Components/Buttons/NextButton";
-import { OrgInput } from "../Components/OrgInput";
-import { OrgAuto } from "../Components/OrgAuto";
+import { roleState } from "../stores/userStates";
+import { orgVal } from "../stores/validateStates";
+import { Layout, NavButtonLayout } from "../components/Layout";
+import PrevButton from "../components/buttons/PrevButton";
+import NextButton from "../components/buttons/NextButton";
+import { OrgInput } from "../components/OrgInput";
+import { OrgAuto } from "../components/OrgAuto";
 
 export default function SelectOrg() {
   const role = useRecoilValue(roleState);

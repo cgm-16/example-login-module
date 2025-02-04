@@ -1,11 +1,11 @@
 import React from "react";
 import { useRecoilValue } from "recoil";
 import "../index.css";
-import { licVal } from "../Stores/validateStates";
-import { Layout, NavButtonLayout } from "../Components/Layout";
-import PrevButton from "../Components/Buttons/PrevButton";
-import NextButton from "../Components/Buttons/NextButton";
-import { LicInput } from "../Components/LicInput";
+import { licVal } from "../stores/validateStates";
+import { Layout, NavButtonLayout } from "../components/Layout";
+import PrevButton from "../components/buttons/PrevButton";
+import NextButton from "../components/buttons/NextButton";
+import { LicInput } from "../components/LicInput";
 
 export default function SelectLicense() {
   const val = useRecoilValue(licVal);

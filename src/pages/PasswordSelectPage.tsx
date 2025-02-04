@@ -1,11 +1,11 @@
 import React from "react";
 import { useRecoilValue } from "recoil";
 import "../index.css";
-import { pwVal } from "../Stores/validateStates";
-import { Layout, NavButtonLayout } from "../Components/Layout";
-import PrevButton from "../Components/Buttons/PrevButton";
-import PrimaryButton from "../Components/Buttons/PrimaryButton";
-import { PwInput } from "../Components/PwInput";
+import { pwVal } from "../stores/validateStates";
+import { Layout, NavButtonLayout } from "../components/Layout";
+import PrevButton from "../components/buttons/PrevButton";
+import PrimaryButton from "../components/buttons/PrimaryButton";
+import { PwInput } from "../components/PwInput";
 
 export default function SelectPw() {
   const val = useRecoilValue(pwVal);

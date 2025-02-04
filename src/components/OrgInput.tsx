@@ -1,8 +1,7 @@
-import React from "react";
 import { useRecoilState } from "recoil";
 import { TextField } from "@mui/material";
-import { orgState } from "../Stores/userStates";
-import { orgVal } from "../Stores/validateStates";
+import { orgState } from "../stores/userStates";
+import { orgVal } from "../stores/validateStates";
 
 export function OrgInput() {
   const [curOrg, setCurOrg] = useRecoilState(orgState);

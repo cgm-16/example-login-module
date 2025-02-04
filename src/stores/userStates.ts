@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { WorkerRole } from "../Types/Roles";
+import { WorkerRole } from "../types/roles";
 
 export const roleState = atom<WorkerRole>({
     key: 'roleState',

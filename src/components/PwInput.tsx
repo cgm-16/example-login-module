@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRecoilState } from "recoil";
-import { pwState } from "../Stores/userStates";
-import { pwVal } from "../Stores/validateStates";
+import { pwState } from "../stores/userStates";
+import { pwVal } from "../stores/validateStates";
 import { IconButton, InputAdornment, TextField } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 

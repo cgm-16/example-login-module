@@ -1,11 +1,11 @@
 import { useRecoilValue } from "recoil";
 import "../index.css";
-import { roleState } from "../Stores/userStates";
-import { accVal } from "../Stores/validateStates";
-import { Layout, NavButtonLayout } from "../Components/Layout";
-import PrevButton from "../Components/Buttons/PrevButton";
-import NextButton from "../Components/Buttons/NextButton";
-import { AccInput } from "../Components/AccInput";
+import { roleState } from "../stores/userStates";
+import { accVal } from "../stores/validateStates";
+import { Layout, NavButtonLayout } from "../components/Layout";
+import PrevButton from "../components/buttons/PrevButton";
+import NextButton from "../components/buttons/NextButton";
+import { AccInput } from "../components/AccInput";
 
 export default function SelectAcc() {
   const val = useRecoilValue(accVal);

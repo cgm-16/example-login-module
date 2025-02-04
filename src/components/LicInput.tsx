@@ -1,8 +1,7 @@
-import React from "react";
 import { useRecoilState } from "recoil";
 import { TextField } from "@mui/material";
-import { licState } from "../Stores/userStates";
-import { licVal } from "../Stores/validateStates";
+import { licState } from "../stores/userStates";
+import { licVal } from "../stores/validateStates";
 
 export function LicInput() {
   const [lic, setLic] = useRecoilState(licState);

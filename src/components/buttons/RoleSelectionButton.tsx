@@ -1,6 +1,6 @@
 import { useRecoilState } from "recoil";
-import { roleState } from "../../Stores/userStates";
-import { WorkerRole } from "../../Types/Roles";
+import { roleState } from "../../stores/userStates";
+import { WorkerRole } from "../../types/roles";
 
 export type RoleButtonProps = {
   roleType: WorkerRole;

@@ -1,4 +1,4 @@
-import { RoleButton } from "./Buttons/RoleSelectionButton";
+import { RoleButton } from "./buttons/RoleSelectionButton";
 
 export const RoleSection = () => {
   return (

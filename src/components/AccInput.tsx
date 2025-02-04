@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { TextField } from "@mui/material";
-import { accState } from "../Stores/userStates";
-import { accVal } from "../Stores/validateStates";
+import { accState } from "../stores/userStates";
+import { accVal } from "../stores/validateStates";
 
 export function AccInput() {
   const [isEmail, setIsEmail] = useState(false);

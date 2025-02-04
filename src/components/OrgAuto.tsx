@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { Autocomplete, TextField } from "@mui/material";
-import { orgState, orgList } from "../Stores/userStates";
-import { orgVal } from "../Stores/validateStates";
+import { orgState, orgList } from "../stores/userStates";
+import { orgVal } from "../stores/validateStates";
 
 export function OrgAuto() {
   const [orgs, setOrgs] = useRecoilState(orgList);

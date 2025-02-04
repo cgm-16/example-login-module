@@ -1,4 +1,4 @@
-import { ButtonProps } from "../../Types/Props";
+import { ButtonProps } from "../../types/props";
 import DefaultButton from "./PrimaryButton";
 
 const NextButton = ({ linkTo, validation }: ButtonProps) => (

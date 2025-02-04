@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ButtonProps } from "../../Types/Props";
+import { ButtonProps } from "../../types/props";
 import {
     faChevronRight,
     faChevronLeft,
