@@ -26,7 +26,10 @@ export function AccInput() {
     setAcc(e.target.value);
   };
 
+  // 지금은 양식에 맞는 모든 이메일이 통과됨
+  // TODO?: 중복이 될 이메일 리스트라도 만들어두기?
   const validate = () => {
+    window.alert("사용 가능한 이메일입니다.");
     setVal(true);
   };
 
